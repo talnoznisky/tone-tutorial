@@ -1,0 +1,54 @@
+body {
+  height: 100%;
+  background-color: #E7F5FE;
+}
+
+h1 {
+  color: red;
+}
+
+.test {
+  background-color: white;
+  display: inline-block;
+  height:100px;
+  width: 100px;
+}
+
+.circle {
+  display: inline-block;
+  border-radius: 50%;
+  height: 7.5vw;
+  width: 7.5vw;
+  animation-name: up-down;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-duration: reverse;
+}
+
+.circle-up {
+  display: inline-block;
+  border-radius: 50%;
+  height: 7.5vw;
+  width: 7.5vw;
+  animation-name: down-up;
+  animation-duration: 3.2s;
+  animation-iteration-count: infinite;
+  animation-duration: reverse;
+}
+
+@keyframes up-down {
+0%    {background-color: #59B6AE; transform: translateY(0);}
+25%   {background-color: #4D3771}
+50%  {background-color: #EC6364; transform: translateY(82vh)}
+75%   {background-color: #FFDB68}
+100%  {background-color: #59B6AE; transform: translateY(0)}
+}
+
+
+@keyframes down-up {
+0%    {background-color: #59B6AE; transform: translateY(82vh);}
+25%   {background-color: #4D3771}
+50%  {background-color: #EC6364; transform: translateY(0vh)}
+75%   {background-color: #FFDB68}
+100%  {background-color: #59B6AE; transform: translateY(82vh)}
+}
