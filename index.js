@@ -1,11 +1,11 @@
 loadCircles = () => {
   let offset = 0
-  for(var i = 0;i < 12; i++){
+  for(var i = 0;i < 13; i++){
     const circle = document.createElement('div')
-    circle.setAttribute('class', 'circle up');
+    circle.setAttribute('class', 'circle');
     circle.style.animationDelay = offset.toString() + 's'
     container.append(circle)
-    offset += .2
+    offset += .07
   }
 }
 

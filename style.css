@@ -7,18 +7,9 @@ body {
   background-color: #E7F5FE;
 }
 
-.up {
-  animation-name: up-down;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-duration: alternate;
-}
-
-.down {
-  animation-name: down-up;
-  animation-duration: 3.2s;
-  animation-iteration-count: infinite;
-  animation-duration: alternate;
+.color {
+  animation-name: color;
+  animation-duration: 4s;
 }
 
 .circle {
@@ -27,22 +18,19 @@ body {
   border-radius: 50%;
   height: 7.5vw;
   width: 7.5vw;
-
+  animation: color 3.2s linear infinite, updown 1.8s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
 }
 
-@keyframes up-down {
-0%    {background-color: #59B6AE; transform: translateY(0vh);}
+@keyframes color {
+0%    {background-color: #59B6AE}
 25%   {background-color: #4D3771}
-50%  {background-color: #EC6364; transform: translateY(82vh)}
+50%   {background-color: #EC6364}
 75%   {background-color: #FFDB68}
-100%  {background-color: #59B6AE; transform: translateY(0vh)}
+100%  {background-color: #59B6AE}
 }
 
-
-@keyframes down-up {
-0%    {background-color: #59B6AE; transform: translateY(82vh);}
-25%   {background-color: #4D3771}
-50%  {background-color: #EC6364; transform: translateY(0vh)}
-75%   {background-color: #FFDB68}
-100%  {background-color: #59B6AE; transform: translateY(82vh)}
+@keyframes updown {
+0%    {transform: translateY(0vh)}
+50%   {transform: translateY(82vh)}
+100%  {transform: translateY(0vh)}
 }
